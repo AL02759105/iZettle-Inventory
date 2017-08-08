@@ -87,7 +87,7 @@ public class InsertDevice extends HttpServlet {
 		//Inserts device id and user id to connection table for relational queries
 		result = device.setIds(user_id, device_id);
 		
-		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/views/NewEntry.jsp");
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/views/SuccessfulEntry.jsp");
 		dispatcher.forward(request,response);
 		}
 	

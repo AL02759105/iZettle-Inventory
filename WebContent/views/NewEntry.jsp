@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Login</title>
+    <title>New Entry</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -21,7 +21,8 @@
 
   </head><%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<body onload="successAlert()">
+<body>
+
 <jsp:include page = "/views/NavBar.jsp"/>
 
 <div class="container">
@@ -45,7 +46,7 @@ Fields marked with "*" are mandatory, please insert as much information as possi
 <form class="form-group" name="NewEntryForm" method="post">
 <br/>
 
-      <div class ="form-group" id="selections" name="selections">
+      <div class ="form-group" id="selections">
       <label for="inputType" class="">DeviceType*</label>
       <select id="inputType" name="inputType">
         <option value="Workstation">Workstation</option>
@@ -70,10 +71,12 @@ Fields marked with "*" are mandatory, please insert as much information as possi
 	  </select>
 	  <label for="inputLocation" class="">Location*</label>
       <select id="inputLocation" name="inputLocation" required>
+        <option value ="BRZ">BRZ</option>
         <option value ="EDI">EDI</option>
         <option value ="LDN">LDN</option>
         <option value ="MEX">MEX</option>
-        <option value ="BRZ">BRZ</option>
+        <option value ="STK">STK</option>
+        
         </select>
         </div>
       <div class="form-group">
@@ -110,18 +113,6 @@ Fields marked with "*" are mandatory, please insert as much information as possi
     
 </form>
 </div>
-	<%
-	if (request.getParameter("inputType") != null) {
-		System.out.println("you redirected great");
-		
-		%>
-		
-		<% 
-	} else {
-		System.out.println("This should be your first visit");
-	}
-	%>
-	
 <%
  conn.close();
 	

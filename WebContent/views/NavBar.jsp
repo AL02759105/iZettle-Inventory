@@ -32,7 +32,7 @@
                 </li>
                 <li><a href="${pageContext.request.contextPath}/Queries">Queries</a>
                 </li>
-                <li><a href="/Logout">Logout</a>
+                <li><a href="${pageContext.request.contextPath}/Login">Logout</a>
                 </li>
             </ul>
         </div>
